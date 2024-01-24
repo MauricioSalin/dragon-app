@@ -1,9 +1,9 @@
-import { BrowserRouter } from 'react-router-dom';
+import './global.css';
 
-import AppRouter from '../../routes/AppRouter';
+import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from '../../contexts/authContext';
 
-import "./global.css"
+import AppRouter from '../../routes/AppRouter';
 
 const App = () => (
   <BrowserRouter>

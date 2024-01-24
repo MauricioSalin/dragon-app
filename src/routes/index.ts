@@ -1,5 +1,5 @@
-import Home from '../../src/views/Home';
-import Login from '../../src/views/Login';
+import Home from '@/views/Home';
+import Login from '@/views/Login';
 
 import { Pages, Route } from './types';
 

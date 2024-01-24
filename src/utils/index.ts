@@ -1,18 +1,20 @@
 export const getDragonDetail = {
-  'water': {
+  water: {
     name: 'Água',
-    icon: '/water.png'
+    icon: '/water.png',
   },
-  'earth': {
+  earth: {
     name: 'Terra',
-    icon: '/earth.png'
+    icon: '/earth.png',
   },
-  'fire': {
+  fire: {
     name: 'Fogo',
-    icon: '/fire.png'
+    icon: '/fire.png',
   },
-  'air': {
+  air: {
     name: 'Ar',
-    icon: '/air.png'
-  }
-}
+    icon: '/air.png',
+  },
+};
+
+export default getDragonDetail;

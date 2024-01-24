@@ -1,10 +1,10 @@
-import "./styles.css"
+import './styles.css';
 
 import { useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Dragon } from '../../api';
-import { DragonFormProps } from '../../views/Home';
-import { getDragonDetail } from '../../utils'
+import { Dragon } from '@/api';
+import { DragonFormProps } from '@/views/Home/types';
+import { getDragonDetail } from '@/utils';
 
 type Props = {
   onEditDragon: SubmitHandler<Dragon>;
@@ -23,11 +23,11 @@ const DragonForm: React.FC<Props> = ({ onEditDragon, onAddDragon, dragon }) => {
   useEffect(() => {
     if (dragon) {
       setValue('name', dragon.name);
-      setValue('type', dragon.type)
+      setValue('type', dragon.type);
     } else {
       reset();
     }
-  }, [dragon])
+  }, [dragon]);
 
   const dragonTypes: Array<Dragon['type']> = ['water', 'air', 'earth', 'fire'];
 
@@ -37,21 +37,20 @@ const DragonForm: React.FC<Props> = ({ onEditDragon, onAddDragon, dragon }) => {
     if (dragon) {
       return onEditDragon({
         ...dragon,
-        ...currentValues
-      }
-      )
+        ...currentValues,
+      });
     }
 
     return onAddDragon(currentValues);
-  }
+  };
 
   return (
-    <div className='form-container'>
-      <div className='form-item'>
+    <div className="form-container">
+      <div className="form-item">
         <label>Name:</label>
         <input type="text" {...register('name')} />
       </div>
-      <div className='form-item'>
+      <div className="form-item">
         <label>Tipo:</label>
         <select {...register('type')}>
           {dragonTypes.map((type) => (
@@ -61,7 +60,9 @@ const DragonForm: React.FC<Props> = ({ onEditDragon, onAddDragon, dragon }) => {
           ))}
         </select>
       </div>
-      <button onClick={onSubmit}>Salvar</button>
+      <button onClick={onSubmit} type="button" aria-label="Save">
+        Salvar
+      </button>
     </div>
   );
 };

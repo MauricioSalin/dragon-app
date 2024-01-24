@@ -1,4 +1,4 @@
-import "./styles.css"
+import './styles.css';
 
 import { useForm } from 'react-hook-form';
 
@@ -6,13 +6,13 @@ type Props = {
   onSubmit: () => void;
 };
 
-type LoginForm = {
+type LoginFormProps = {
   username: string;
   password: string;
-}
+};
 
 const LoginForm: React.FC<Props> = ({ onSubmit }) => {
-  const { register, handleSubmit } = useForm<LoginForm>({
+  const { register, handleSubmit } = useForm<LoginFormProps>({
     defaultValues: {
       username: '',
       password: '',
@@ -20,16 +20,16 @@ const LoginForm: React.FC<Props> = ({ onSubmit }) => {
   });
 
   return (
-    <form className='form-container' onSubmit={handleSubmit(onSubmit)}>
-      <div className='form-item'>
+    <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-item">
         <label>Usuário:</label>
         <input type="text" {...register('username')} />
       </div>
-      <div className='form-item'>
+      <div className="form-item">
         <label>Senha:</label>
         <input type="password" {...register('password')} />
       </div>
-      <button type="submit" >Entrar</button>
+      <button type="submit">Entrar</button>
     </form>
   );
 };

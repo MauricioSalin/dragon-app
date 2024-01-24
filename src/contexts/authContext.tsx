@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie';
 
 type AuthContextProps = {
   token: string | null;
@@ -33,21 +33,19 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setIsAuthenticated(true);
 
     setToken(newToken);
-    Cookies.set("token", newToken);
+    Cookies.set('token', newToken);
 
     navigate('/');
   };
 
   const logout = () => {
     setToken(null);
-    Cookies.remove("token");
+    Cookies.remove('token');
     setIsAuthenticated(false);
   };
 
   useEffect(() => {
-    const storedToken = Cookies.get("token");
-
-    console.log(storedToken)
+    const storedToken = Cookies.get('token');
 
     if (storedToken) {
       setToken(storedToken);

@@ -6,9 +6,13 @@ type Props = {
   modalIsOpen: boolean;
   onCloseModal: () => void;
   children: React.ReactNode;
-}
+};
 
-const CustomModal: React.FC<Props> = ({ modalIsOpen, onCloseModal, children }) => (
+const CustomModal: React.FC<Props> = ({
+  modalIsOpen,
+  onCloseModal,
+  children,
+}) => (
   <Modal
     isOpen={modalIsOpen}
     onRequestClose={onCloseModal}
@@ -22,8 +26,8 @@ const CustomModal: React.FC<Props> = ({ modalIsOpen, onCloseModal, children }) =
         transform: 'translate(-50%, -50%)',
       },
       overlay: {
-        backgroundColor: "#000000a1"
-      }
+        backgroundColor: '#000000a1',
+      },
     }}
   >
     {children}

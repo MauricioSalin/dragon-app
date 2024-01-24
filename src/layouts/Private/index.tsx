@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useAuth } from '../../contexts/authContext';
+import { useAuth } from '@/contexts/authContext';
 
 type Props = {
   title: string;
@@ -14,14 +14,11 @@ const PrivateLayout: React.FC<Props> = ({ children, title }) => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate('/login')
+      navigate('/login');
     }
-
   }, []);
 
-  return (
-    <main title={title}>{children}</main>
-  );
+  return <main title={title}>{children}</main>;
 };
 
 export default PrivateLayout;

@@ -4,8 +4,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-const PublicLayout = ({ children }: Props) => (
-  <main>{children}</main>
-);
+const PublicLayout = ({ children }: Props) => <main>{children}</main>;
 
 export default PublicLayout;

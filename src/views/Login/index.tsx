@@ -1,10 +1,10 @@
-import "./styles.css"
+import './styles.css';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from "../../contexts/authContext";
+import { useAuth } from '@/contexts/authContext';
 
-import LoginForm from "../../components/LoginForm";
+import LoginForm from '@/components/LoginForm';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -14,14 +14,13 @@ const Login = () => {
     if (isAuthenticated) {
       navigate('/');
     }
-
   }, [isAuthenticated]);
 
   const onSubmit = () => {
-    const mockToken = "teste123456";
+    const mockToken = 'teste123456';
 
-    login(mockToken)
-  }
+    login(mockToken);
+  };
 
   return (
     <div className="login-container">
