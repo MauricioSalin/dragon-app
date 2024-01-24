@@ -36,6 +36,8 @@ NÃO é permitido usar bibliotecas de estilos como: bootstrap, material design, 
 
 Bom teste!
 
+![image](https://github.com/MauricioSalin/dragon-app/assets/13355144/5c0dec15-9f45-41a1-9bb6-fd8079b74e9d)
+
 ## Entrega: Observações
 
 - Usuário e senha pode ser qualquer uma, implementado apenas o contexto salvando Token nos Cookies.
