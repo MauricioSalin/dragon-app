@@ -2,9 +2,9 @@ import './styles.css';
 
 import { useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Dragon } from '@/api';
-import { DragonFormProps } from '@/views/Home/types';
-import { getDragonDetail } from '@/utils';
+import { Dragon } from '../../api';
+import { DragonFormProps } from '../../views/Home/types';
+import { getDragonDetail } from '../../utils';
 
 type Props = {
   onEditDragon: SubmitHandler<Dragon>;

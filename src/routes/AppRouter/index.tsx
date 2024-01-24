@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
-import PrivateLayout from '@/layouts/Private';
-import PublicLayout from '@/layouts/Public';
+import PrivateLayout from '../../layouts/Private';
+import PublicLayout from '../../layouts/Public';
 import routes from '..';
 
 const AppRouter = () => (

@@ -3,12 +3,12 @@ import './styles.css';
 import { useEffect, useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
 import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
-import { Dragon, DragonService } from '@/api';
-import { getDragonDetail } from '@/utils';
+import { Dragon, DragonService } from '../../api';
 import { DragonFormProps } from './types';
+import { getDragonDetail, formatDate } from '../../utils';
 
-import DragonForm from '@/components/DragonForm';
-import CustomModal from '@/components/Modal';
+import DragonForm from '../../components/DragonForm';
+import CustomModal from '../../components/Modal';
 
 const DragonList: React.FC = () => {
   const [dragon, setDragon] = useState<Dragon | null>(null);
@@ -23,9 +23,6 @@ const DragonList: React.FC = () => {
 
     fetchDragonList();
   }, []);
-
-  const formatDate = (date: Date): string =>
-    new Intl.DateTimeFormat('pt-BR', { timeZone: 'UTC' }).format(date);
 
   const handleEdit = (data: Dragon) => {
     setDragon(data);
@@ -97,9 +94,7 @@ const DragonList: React.FC = () => {
             </div>
             <div className="dragon-info">
               <h3>{sortedDragon.name}</h3>
-              <p>
-                Data de criação: {formatDate(new Date(sortedDragon.createdAt))}
-              </p>
+              <p>Data de criação: {formatDate(sortedDragon.createdAt)}</p>
               <p>Tipo: {getDragonDetail[sortedDragon.type].name}</p>
 
               <div className="dragon-actions">

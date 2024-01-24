@@ -32,6 +32,7 @@ module.exports = {
     "react/no-array-index-key": "off",
     "react-refresh/only-export-components": "off",
     "jsx-a11y/label-has-associated-control": "off",
+    "import/no-extraneous-dependencies": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

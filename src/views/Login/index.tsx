@@ -2,9 +2,9 @@ import './styles.css';
 
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/contexts/authContext';
+import { useAuth } from '../../contexts/authContext';
 
-import LoginForm from '@/components/LoginForm';
+import LoginForm from '../../components/LoginForm';
 
 const Login = () => {
   const navigate = useNavigate();
