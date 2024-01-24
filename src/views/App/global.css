@@ -1,0 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/trick-or-treats');
+
+:root {
+  font-family: 'Trick Or Treats', sans-serif;
+  letter-spacing: 1.2px;
+}
+
+body {
+  padding: 20px;
+  margin: 0;
+  max-height: 100vh;
+  background-image: url('/50656.jpg');
+  background-repeat: no-repeat;
+}
