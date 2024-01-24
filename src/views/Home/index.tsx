@@ -78,6 +78,8 @@ const DragonList: React.FC = () => {
     setIsOpen(false)
   }
 
+  const sortedDragons = dragons.slice().sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <div className="dragon-container">
       <div className='dragon-header'>
@@ -87,7 +89,7 @@ const DragonList: React.FC = () => {
         </button>
       </div>
       <div className='dragon-list'>
-        {dragons.map(dragon => (
+        {sortedDragons.map(dragon => (
           <div key={dragon.id} className="dragon-card">
             <div className='dragon-type'>
               <img src={getDragonDetail[dragon.type].icon} />
